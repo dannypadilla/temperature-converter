@@ -1,0 +1,143 @@
+<!DOCTYPE>
+<html ng-app = "myApp">
+
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <title>Temperature</title>
+
+  </head>
+
+  <body id="page-top" class="index">
+
+    <!-- Navbar -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+      	<div class="navbar-header page-scroll">
+      	  <button type="button" class="navbar-toggle">
+      	    <span class="sr-only">Toggle Navigation</span>Menu<i class="fa fa-bars"></i>
+      	  </button>
+      	  <a class="navbar-brand" href="#page-top">Homework 5</a>
+      	</div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      	  <ul class="nav navbar-nav navbar-right">
+      	    <li class="hidden">
+      	      <a href="#page-top"></a>
+      	    </li>
+      	    <li class="page-scroll">
+      	      <a href="#">Template</a>
+      	    </li>
+      	    <li class="page-scroll">
+      	      <a href="#">From</a>
+      	    </li>
+      	    <li class="page-scroll">
+      	      <a href="#">Bootstrap</a>
+      	    </li>
+      	  </ul>
+      	</div>
+
+      </div>
+    </nav>
+
+    <header>
+      <div class="container">
+
+      	<div class"row">
+      	  <div class"col-lg-12">
+      	    <div class="intro-text">
+      	      <span class="name">Temp</span>
+      	      <hr class="star-light">
+      	      <span class="skills">Danny Padilla</span>
+      	      <div>
+      	      	<img class="img-rounded" src="images/temperature-converter.png" alt="cake is a lie" width="100%">
+              </div>
+      	    </div>
+      	  </div>
+      	</div>
+
+      </div>
+    </header>
+
+    <!-- input temperature -->
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-6 col-md-6 text-center">
+          <section id="temperature">
+
+            <form id="temp_form" name="info">
+              <div class="form-group">
+
+                <div class="row">
+              	  <div class="col-lg-12 text-center">
+              	    <h4>Enter the temperature to be converted</h4>
+              	    <hr class="star-primary">
+              	  </div>
+                </div>
+
+                <div class="row">
+              	  <div class="col-lg-12 text-center">
+                    <input id="user_input" class="form-control" value="">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-12 text-center " id="radio_select">
+                    <label class="radio-inline" >
+                      <input type="radio" name="inlineRadioOptions" id="far" value="0" checked>Farhrenheit
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="inlineRadioOptions" id="cel" value="1">Celsius
+                    </label>
+                  </div>
+                </div>
+
+              </div> <!-- for-group -->
+            </form>
+
+            <!-- weird how submit behaved when outside of form...  got lucky -->
+            <div class="col-lg-12 text-center">
+              <button type="submit" class="btn btn-primary" onclick="get_data()">Convert</button>
+            </div>
+
+          </section>
+        </div>
+
+
+        <!-- display sections -->
+        <div class="col-lg-6  col-md-6 text-center">
+        <section id="display">
+
+            <div class="row">
+          	  <div class="col-lg-12 text-center">
+          	    <h4>&nbsp;</h4>
+          	    <hr class="star-primary">
+          	  </div>
+            </div>
+
+            <div class="row">
+          	  <div class="col-lg-12 text-center">
+                <div class="panel panel-default">
+                  <div id="result" class="panel-body">
+                    &nbsp;
+                    <p id= "result_data"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="js/temperature.js"></script>
+
+  </body>
+
+</html>
